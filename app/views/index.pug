@@ -1,0 +1,34 @@
+extends layout
+block content
+    .c-add
+        h3.c-add__title Add some drinks below 😊
+        .c-input-container
+            label.c-input-container__label Each drink contains:
+            .c-input
+                input(type="number" id="volume").c-input-container__input
+                span.c-input-container__symbol ml
+            .c-input
+                input(type="number" id="content").c-input-container__input
+                span.c-input-container__symbol %
+        .c-buttons    
+            button(id="btn").c-buttons__btn-1 ADD DRINK
+            button(id="delete").c-buttons__btn-2 DELETE ALL
+    
+        .c-lists
+            ul(id="vol").c-vol-ul
+            ul(id="per").c-vol-ul
+        .c-calculation
+            .c-input
+                label.c-calculation__label Weight:
+                input(type="number" id="weight").c-calculation__input
+                span.c-calculation__symbol kg
+            .c-input    
+                label.c-calculation__label Gender:
+                select(id="gender").c-calculation__select
+                    option(value="male").c-calculation__option Male
+                    option(value="female").c-calculation__option Female
+            .c-input        
+                label.c-calculation__label Last drink:
+                input(type="number" id="time").c-calculation__input
+                span.c-calculation__symbol hrs ago
+            output(id="result").c-calculation__output
